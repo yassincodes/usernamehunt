@@ -1,1 +1,27 @@
+body {
+  margin:0;
+  padding:0;
+}
 
+nav {
+  display:flex;
+  justify-content: space-around;
+  background: rgb(180, 180, 180);
+}
+
+.main_section {
+  display:flex;
+  justify-content: center;
+}
+
+#firstName, #lastName {
+  width:30vw;
+}
+
+.write_name_section h2 {
+  text-align: center;
+}
+
+.usernames {
+  display:block;
+}
