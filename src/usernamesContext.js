@@ -1,16 +1,19 @@
 import React, {useState} from "react"
 
-const windowNumberContext = React.createContext()
+const usernamesContext = React.createContext()
 
-function usernamesContextProvider({children}) {
+function UsernamesContextProvider({children}) {
 
-
+    let array = []
+    const [usernamesArray, setUsernamesArray] = useState(array)
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
 
 return (
-    <windowNumberContext.Provider value={{windowNumber, setWindowNumber}}>
+    <usernamesContext.Provider value={{array, usernamesArray, setUsernamesArray, firstName, setFirstName, lastName, setLastName}}>
         {children}
-    </windowNumberContext.Provider>
+    </usernamesContext.Provider>
 )
 }
 
-export {usernamesContextProvider, windowNumberContext}
+export {UsernamesContextProvider, usernamesContext}
