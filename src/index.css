@@ -1,6 +1,7 @@
 body {
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 
 nav {
@@ -26,15 +27,22 @@ nav {
   display:block;
 }
 
+.main_box {
+  margin-left:10vw;
+}
+
 .box {
   border:2px solid black;
   display:inline-block;
   width:40vw;
+  height: 4.5vh;
+  padding-top:2vh;
+  padding-bottom:2vh;
 }
 
-.main_box {
-  display:flex;
-  flex-direction: center;
-  margin-left:10vw;
+
+.add_to_list_box {
+  color:rgb(207, 207, 207);
 }
+
 
