@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin:0;
   padding:0;
@@ -12,7 +16,8 @@ nav {
 
 .main_section {
   display:flex;
-  justify-content: center;
+  flex-direction:column;
+  align-items: center;
 }
 
 #firstName, #lastName {
@@ -23,22 +28,35 @@ nav {
   text-align: center;
 }
 
+.info_page {
+  width: 90vw;
+}
+
 .usernames {
   display:block;
 }
 
-.main_box {
-  margin-left:10vw;
+.usernames_container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.box {
+.info_box, .username_box {
   border:2px solid black;
   display:inline-block;
-  width:40vw;
+  width:45vw;
   height: 4.5vh;
   padding-top:2vh;
   padding-bottom:2vh;
 }
+
+/* 
+this code to 
+.info_box {
+  width:50vw;
+} 
+*/
 
 
 .add_to_list_box {

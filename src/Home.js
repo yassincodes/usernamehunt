@@ -16,10 +16,15 @@ function Home() {
     <div className="App">
       <HomeNav />
       <div className="main_section">
-      <section className="write_name_section">
+      <div className="write_name_section">
         <h2>great usernames from and for awesome influencers</h2>
         <HomeForm />
-      </section>
+      </div>
+      <div className="info_page">
+        <div>choose your username</div>
+        <div>why we are better than 90% of other username providers</div>
+        <div>FAQ</div>
+      </div>
       </div>
     </div>
   );
