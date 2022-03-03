@@ -6,13 +6,19 @@ function HomeForm() {
     const {firstInput, secondInput, setFirstInput, setSecondInput, array, setUsernamesArray} = useContext(usernamesContext)
     let firstName = ''
     let secondName = ''
+
     function findUsername() {
+      // making sure that the name contain only characters
       firstName = firstInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
       secondName = secondInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
+
+      // making the list of usernames
       array[0] = {username: firstName + "io", inspiredFrom: "@levelsio"}
       array[1] = {username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
       setUsernamesArray(array)
+      
     }  
+
     return (
         <form>
             <input type="text" id="firstName" onChange={(e) => setFirstInput(e.target.value)}/>

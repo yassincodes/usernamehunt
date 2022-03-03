@@ -11,9 +11,9 @@ function UsernamesPage() {
         <div>
             <HomeNav />
             <div className="main_section"><HomeForm /></div>
-            <div>username|inspired from</div>
+            <div><span className="box">username</span><span className="box">inspired from</span></div>
             {usernamesArray.map((username, key) => {
-              return <div key={uuid()}>{username.username}|{username.inspiredFrom}</div>
+              return <div key={uuid()}><span className="box">{username.username}</span><span className="box">{username.inspiredFrom}</span></div>
             })} 
         <Link to="/">back to home</Link>
         </div>
