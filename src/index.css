@@ -28,6 +28,13 @@ nav {
 
 .box {
   border:2px solid black;
-  background:blue;
-  width:300px;
+  display:inline-block;
+  width:40vw;
 }
+
+.main_box {
+  display:flex;
+  flex-direction: center;
+  margin-left:10vw;
+}
+
