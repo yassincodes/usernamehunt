@@ -6,11 +6,11 @@ function UsernamesContextProvider({children}) {
 
     let array = []
     const [usernamesArray, setUsernamesArray] = useState(array)
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
+    const [firstInput, setFirstInput] = useState('')
+    const [secondInput, setSecondInput] = useState('')
 
 return (
-    <usernamesContext.Provider value={{array, usernamesArray, setUsernamesArray, firstName, setFirstName, lastName, setLastName}}>
+    <usernamesContext.Provider value={{array, usernamesArray, setUsernamesArray, firstInput, setFirstInput, secondInput, setSecondInput}}>
         {children}
     </usernamesContext.Provider>
 )
