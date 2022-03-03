@@ -24,8 +24,8 @@ function HomeForm() {
 
     return (
         <form>
-            <input type="text" id="firstName" value={} onChange={(e) => setFirstInput(e.target.value)}/>
-            <input type="text" id="lastName" value={} onChange={(e) => setSecondInput(e.target.value)} />
+            <input type="text" id="firstName" onChange={(e) => setFirstInput(e.target.value)}/>
+            <input type="text" id="lastName"  onChange={(e) => setSecondInput(e.target.value)} />
             <Link to="/usernames" onClick={findUsername}>find username!</Link>
         </form>
     )
