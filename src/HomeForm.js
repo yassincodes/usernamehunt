@@ -47,7 +47,7 @@ function HomeForm() {
         <form>
             <input type="text" id="firstName" value={firstInput === "null" ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>
             <input type="text" id="lastName"  value={secondInput === "null" ? "" : secondInput} onChange={(e) => setSecondInput(e.target.value)} />
-            <Link to="/usernames" onClick={() => findUsername(firstInput, secondInput)}>find username!</Link>
+            <Link to="/usernames" id="findUsername" onClick={() => findUsername(firstInput, secondInput)}>find username!</Link>
         </form>
     )
 }

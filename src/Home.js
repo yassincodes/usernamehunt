@@ -22,7 +22,7 @@ function Home() {
       <HomeNav />
       <div className="main_section">
       <div className="write_name_section">
-        <h2>great usernames from and for awesome influencers</h2>
+        <h2>generate a username like the one famous influencers and brands has</h2>
         <HomeForm />
       </div>
       <div className="info_page">

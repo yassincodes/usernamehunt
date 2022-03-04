@@ -10,32 +10,59 @@ body {
 
 nav {
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding:1.5vh 5vw;
   background: rgb(240, 240, 240);
+}
+
+.download_extension {
+  display:flex;
+  align-items: center;
+  border:2px solid black;
+  padding:2px 12px;
+  background:black;
+  color:white;
+  cursor:pointer;
+
 }
 
 form {
   border-radius: 10px;
   width:90vw;
   margin-top:4vh;
-  padding-top:1vh;
-  padding-bottom:1vh;
+  padding-top:6vh;
+  padding-bottom:6vh;
   box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 .main_section {
   display:flex;
   flex-direction:column;
   align-items: center;
 }
 
-#firstName, #lastName {
-  width:30vw;
+#firstName, #lastName, #findUsername {
+  width:30%;
 }
 
-.write_name_section h2 {
+#findUsername {
+  width:30%;
   text-align: center;
 }
 
+.write_name_section {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.write_name_section h2 {
+  margin-left:10vw;
+  margin-right:10vw;
+}
 .info_page {
   width: 90vw;
 }
