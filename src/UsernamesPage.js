@@ -32,6 +32,9 @@ function UsernamesPage() {
                 })} 
                 </div>
                 </div>
+                <div className="footer_buttons">   
+                     <Link to="/favorite">see list</Link>
+                </div>
         </div>
     )
 }
