@@ -6,8 +6,10 @@
 // rhinestone eyes
 // all my friends are toxic
 // some say say you'll love me one day
-import React, {useContext} from 'react'
-import { usernamesContext } from './usernamesContext'
+
+// describe your product @imsh4yy (describe product and show landing page)
+// take a pic of every coffee you take while building a product (or your portfolio)
+import React from 'react'
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
 

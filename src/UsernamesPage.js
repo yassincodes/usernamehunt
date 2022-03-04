@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 function UsernamesPage() {
     const {usernamesArray} = useContext(usernamesContext)
     return (
-        <div>
+        <div className="usernames_page">
             <HomeNav />
             <div className="main_section"><HomeForm /></div>
                 <div className="usernames_container">
@@ -18,6 +18,7 @@ function UsernamesPage() {
                     <span className="info_box">username</span>
                     <span className="info_box">inspired from</span>
                 </div>
+                <div className="test">
                 {usernamesArray.map((username) => {
                     return  <div key={uuid()} className="usernames_box">
                               <span className="username_box">{username.username}</span>
@@ -29,6 +30,7 @@ function UsernamesPage() {
                               </span>
                             </div>
                 })} 
+                </div>
                 </div>
                 <Link to="/">back to home</Link>
         </div>
