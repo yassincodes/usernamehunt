@@ -17,8 +17,12 @@ function HomeForm() {
       secondName = firstInput && secondInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
 
       // making the list of usernames
+      // focus on lowering cases and uppering cases
       array[0] = {username: firstName + "io", inspiredFrom: "@levelsio"}
       array[1] = {username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+      array[2] = {username: "DH" + firstName, inspiredFrom: "@ddheh"}
+      array[3] = {username: secondName + "45785", inspiredFrom: "@someone"}
+      array[4] = {username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
       setUsernamesArray(array)
 
       localStorage.setItem("firstName", firstName)
@@ -30,7 +34,6 @@ function HomeForm() {
         setSecondInput(localStorage.getItem("secondName"))
     }, [])
 
-    console.log(firstInput == "null")
     return (
         <form>
             <input type="text" id="firstName" value={firstInput == "null" ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>

@@ -14,18 +14,18 @@ function UsernamesPage() {
                 <div className="usernames_container">
                 <div 
                     className="info_boxes" 
-                    style={{marginTop:"15px", marginBottom:"15px"}} >
-                    <span className="info_box">username</span>
-                    <span className="info_box">inspired from</span>
+                    style={{marginTop:"15px"}} >
+                    <span className="info_box"  style={{width:"40vw"}} >username</span>
+                    <span className="info_box"  style={{width:"50vw"}}>inspired from</span>
                 </div>
                 <div className="test">
                 {usernamesArray.map((username) => {
                     return  <div key={uuid()} className="usernames_box">
-                              <span className="username_box">{username.username}</span>
-                              <span className="username_box">
+                              <span className="username_box" style={{width:"40vw"}}>{username.username}</span>
+                              <span className="username_box" style={{width:"50vw"}}>
                                 <div style={{display:"flex", justifyContent:"space-between"}}>
                                      <span>{username.inspiredFrom}</span>
-                                     <span className="add_to_list_box">add to list</span>
+                                     <span className="like_box">like</span>
                                 </div>
                               </span>
                             </div>
