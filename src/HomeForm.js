@@ -21,6 +21,16 @@ function HomeForm() {
       array[2] = {username: "DH" + firstName, inspiredFrom: "@ddheh"}
       array[3] = {username: secondName + "45785", inspiredFrom: "@someone"}
       array[4] = {username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
+      array[5] = {username: firstName + "io", inspiredFrom: "@levelsio"}
+      array[6] = {username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+      array[7] = {username: "DH" + firstName, inspiredFrom: "@ddheh"}
+      array[8] = {username: secondName + "45785", inspiredFrom: "@someone"}
+      array[9] = {username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
+      array[10] = {username: firstName + "io", inspiredFrom: "@levelsio"}
+      array[11] = {username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+      array[12] = {username: "DH" + firstName, inspiredFrom: "@ddheh"}
+      array[13] = {username: secondName + "45785", inspiredFrom: "@someone"}
+      array[14] = {username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
       setUsernamesArray(array)
 
       localStorage.setItem("firstName", firstName)

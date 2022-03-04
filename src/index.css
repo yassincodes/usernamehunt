@@ -59,15 +59,23 @@ form {
   padding-bottom:2vh;
 }
 
-.test {  
-
-
-}
 
 .info_boxes {
   /*width:50vw;*/
   padding-left: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background:rgb(255, 240, 240);
+  border-radius:20px;
 } 
+
+
+.test {
+  border-radius: 20px;
+}
 
 .username_box {
   border-top: 0.7px solid rgb(230, 230, 230);
