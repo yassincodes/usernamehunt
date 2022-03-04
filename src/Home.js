@@ -9,6 +9,12 @@
 
 // describe your product @imsh4yy (describe product and show landing page)
 // take a pic of every coffee you take while building a product (or your portfolio)
+
+// what do you think ?
+// is it better to put 10 average projects in your portfolio
+// or just 2 or 3 great projects ?
+// cointity or quality ?
+
 import React from 'react'
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
