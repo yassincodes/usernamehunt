@@ -32,7 +32,6 @@ function UsernamesPage() {
                 })} 
                 </div>
                 </div>
-                <Link to="/">back to home</Link>
         </div>
     )
 }
