@@ -14,9 +14,9 @@ function UsernamesPage() {
                 <div className="usernames_container">
                 <div 
                     className="info_boxes" 
-                    style={{marginTop:"15px"}} >
-                    <span className="info_box"  style={{width:"40vw"}} >username</span>
-                    <span className="info_box"  style={{width:"50vw"}}>inspired from</span>
+                    style={{marginTop:"30px"}} >
+                    <span className="info_box"  style={{width:"45%"}} >username</span>
+                    <span className="info_box"  style={{width:"55%"}}>inspired from</span>
                 </div>
                 <div className="test">
                 {usernamesArray.map((username) => {
