@@ -1,4 +1,4 @@
-import {useContext} from "react"
+import {useContext, useState} from "react"
 import {usernamesContext} from "./usernamesContext"
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
@@ -7,6 +7,14 @@ import { Link } from "react-router-dom"
 
 function UsernamesPage() {
     const {usernamesArray} = useContext(usernamesContext)
+    const [buttonName, setButtonName] = useState(true)
+    const [favoriteList, setFavoriteList] = useState([])
+    favoriteList && console.log(favoriteList)
+    let array = []
+    console.log(array)
+    function changeButton() {
+        setButtonName(!buttonName)
+    }
     return (
         <div className="usernames_page">
             <HomeNav />
@@ -20,12 +28,16 @@ function UsernamesPage() {
                 </div>
                 <div className="test">
                 {usernamesArray.map((username) => {
-                    return  <div key={uuid()} className="usernames_box">
+                    return  <div key={username.key} className="usernames_box">
                               <span className="username_box" style={{width:"40vw"}}>{username.username}</span>
                               <span className="username_box" style={{width:"50vw"}}>
                                 <div style={{display:"flex", justifyContent:"space-between"}}>
-                                     <span>{username.inspiredFrom}</span>
-                                     <span className="like_box">like</span>
+                                    <span>{username.inspiredFrom}</span>
+                                    <span 
+                                        className="like_box" 
+                                        onClick={() => console.log(username)}>
+                                        {buttonName ? "like" : "unlike"}
+                                    </span>
                                 </div>
                               </span>
                             </div>

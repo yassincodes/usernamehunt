@@ -16,21 +16,21 @@ function HomeForm() {
       // focus on lowering cases and uppering cases
       // make different array + when u map the big one you will just concat them all
       // before maping . you need to change the state to choose the type of array you want 
-      array[0] = {username: firstName + "io", inspiredFrom: "@levelsio"}
-      array[1] = {username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
-      array[2] = {username: "DH" + firstName, inspiredFrom: "@ddheh"}
-      array[3] = {username: secondName + "45785", inspiredFrom: "@someone"}
-      array[4] = {username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
-      array[5] = {username: firstName + "io", inspiredFrom: "@levelsio"}
-      array[6] = {username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
-      array[7] = {username: "DH" + firstName, inspiredFrom: "@ddheh"}
-      array[8] = {username: secondName + "45785", inspiredFrom: "@someone"}
-      array[9] = {username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
-      array[10] = {username: firstName + "io", inspiredFrom: "@levelsio"}
-      array[11] = {username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
-      array[12] = {username: "DH" + firstName, inspiredFrom: "@ddheh"}
-      array[13] = {username: secondName + "45785", inspiredFrom: "@someone"}
-      array[14] = {username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
+      array[0] = {key: 1, username: firstName + "io", inspiredFrom: "@levelsio"}
+      array[1] = {key: 2, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+      array[2] = {key: 3, username: "DH" + firstName, inspiredFrom: "@ddheh"}
+      array[3] = {key: 4, username: secondName + "45785", inspiredFrom: "@someone"}
+      array[4] = {key: 5, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
+      array[5] = {key: 6, username: firstName + "io", inspiredFrom: "@levelsio"}
+      array[6] = {key: 7, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+      array[7] = {key: 8, username: "DH" + firstName, inspiredFrom: "@ddheh"}
+      array[8] = {key: 9, username: secondName + "45785", inspiredFrom: "@someone"}
+      array[9] = {key: 10, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
+      array[10] = {key: 11, username: firstName + "io", inspiredFrom: "@levelsio"}
+      array[11] = {key: 12, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+      array[12] = {key: 13, username: "DH" + firstName, inspiredFrom: "@ddheh"}
+      array[13] = {key: 14, username: secondName + "45785", inspiredFrom: "@someone"}
+      array[14] = {key: 15, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
       setUsernamesArray(array)
 
       localStorage.setItem("firstName", firstName)
