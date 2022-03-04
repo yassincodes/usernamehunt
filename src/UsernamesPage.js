@@ -1,4 +1,4 @@
-import {useContext, useState} from "react"
+import {useContext, useState, useEffect} from "react"
 import {usernamesContext} from "./usernamesContext"
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
@@ -7,14 +7,15 @@ import { Link } from "react-router-dom"
 
 function UsernamesPage() {
     const {usernamesArray} = useContext(usernamesContext)
+
     const [buttonName, setButtonName] = useState(true)
-    const [favoriteList, setFavoriteList] = useState([])
-    favoriteList && console.log(favoriteList)
-    let array = []
+    const [array, setArray] = useState([])
     console.log(array)
-    function changeButton() {
+    function addToFavorite(u) {
+        setArray([...array, u.username])
         setButtonName(!buttonName)
     }
+
     return (
         <div className="usernames_page">
             <HomeNav />
@@ -23,7 +24,7 @@ function UsernamesPage() {
                 <div 
                     className="info_boxes" 
                     style={{marginTop:"30px"}} >
-                    <span className="info_box"  style={{width:"45%"}} >username</span>
+                    <span className="info_box"  style={{width:"45%"}}>username</span>
                     <span className="info_box"  style={{width:"55%"}}>inspired from</span>
                 </div>
                 <div className="test">
@@ -35,7 +36,9 @@ function UsernamesPage() {
                                     <span>{username.inspiredFrom}</span>
                                     <span 
                                         className="like_box" 
-                                        onClick={() => console.log(username)}>
+                                        onClick={() => buttonName 
+                                        ? addToFavorite({key: username.key, username: username.username, inspiredFrom: username.inspiredFrom}) 
+                                        : setButtonName(!buttonName)}>
                                         {buttonName ? "like" : "unlike"}
                                     </span>
                                 </div>
