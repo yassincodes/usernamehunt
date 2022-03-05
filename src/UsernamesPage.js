@@ -2,19 +2,30 @@ import {useContext, useState, useEffect} from "react"
 import {usernamesContext} from "./usernamesContext"
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
-import uuid from "react-uuid"
 import { Link } from "react-router-dom"
 
 function UsernamesPage() {
     const {usernamesArray} = useContext(usernamesContext)
 
-    const [buttonName, setButtonName] = useState(true)
+    // const [buttonName, setButtonName] = useState(true)
+    const [numberArray, setNumberArray] = useState([])
     const [array, setArray] = useState([])
     console.log(array)
     function addToFavorite(u) {
-        setArray([...array, u.username])
-        setButtonName(!buttonName)
+        if (numberArray.includes(u.key) === false) {
+            setNumberArray([...numberArray, u.key])
+            setArray([...array, u])
+        }
     }
+
+    useEffect(() => {
+        localStorage.setItem("array", JSON.stringify(array))
+    }, [array])
+
+    // todo: when a user clicks on the like button 
+    // it will change to become unlike
+    // like => will add to the favorite + change the text to become unlike
+    // unlike => will remove from favorite + change the text to become like
 
     return (
         <div className="usernames_page">
@@ -33,13 +44,11 @@ function UsernamesPage() {
                               <span className="username_box" style={{width:"40vw"}}>{username.username}</span>
                               <span className="username_box" style={{width:"50vw"}}>
                                 <div style={{display:"flex", justifyContent:"space-between"}}>
-                                    <span>{username.inspiredFrom}</span>
+                                    <span style={{display:"flex", alignItems:"center"}}>{username.inspiredFrom}</span>
                                     <span 
-                                        className="like_box" 
-                                        onClick={() => buttonName 
-                                        ? addToFavorite({key: username.key, username: username.username, inspiredFrom: username.inspiredFrom}) 
-                                        : setButtonName(!buttonName)}>
-                                        {buttonName ? "like" : "unlike"}
+                                        className={numberArray.includes(username.key) ? "liked_box" : "like_box"}
+                                        onClick={() => addToFavorite({key: username.key, username: username.username, inspiredFrom: username.inspiredFrom}) }>
+                                        {numberArray.includes(username.key) ? "liked" : "like"}
                                     </span>
                                 </div>
                               </span>

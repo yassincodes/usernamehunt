@@ -15,6 +15,10 @@ nav {
   background: rgb(240, 240, 240);
 }
 
+nav h2 {
+  cursor:pointer;
+}
+
 .download_extension {
   display:flex;
   align-items: center;
@@ -86,7 +90,6 @@ form {
   padding-bottom:2vh;
 }
 
-
 .info_boxes {
   /*width:50vw;*/
   padding-left: 20px;
@@ -105,20 +108,36 @@ form {
 }
 
 .username_box {
-  border-top: 0.7px solid rgb(230, 230, 230);
+
   padding-left:20px;
   padding-right:20px;
 }
 
+.usernames_box {
+  border-top: 0.7px solid rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+}
 
-.like_box {
+.like_box, .liked_box {
   background:rgb(207, 207, 207);
+  border:2px solid black;
   color:white;
+  width:20%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   padding-left:10px;
   padding-right:10px;
   cursor:pointer;
+  border-radius: 5px;
+  padding-top:4px;
+  padding-bottom: 4px;
 }
 
+.liked_box {
+  background:rgb(147, 248, 147);
+}
 
 .footer_buttons {
   background:rgb(235, 235, 235);
@@ -126,6 +145,6 @@ form {
   position: sticky;
   bottom: 0;
   padding:2.5vh 2.5vw;
-  display: flex;
+  display:flex;
   justify-content: flex-end;
 }
