@@ -17,6 +17,14 @@ function UsernamesPage() {
         if (arrayNumber.includes(u.key) === false) {
             setArrayNumber([...arrayNumber, u.key])
             setArray([...array, u])
+        } else {
+            let filteredArrayNumber = arrayNumber.filter(e => e !== u.key)
+            setArrayNumber(filteredArrayNumber)
+            localStorage.setItem("arrayNumber", JSON.stringify(filteredArrayNumber))
+
+            let filteredArray = array.filter(e => e.key !== u.key)
+            setArray(filteredArray)
+            localStorage.setItem("array", JSON.stringify(filteredArray))
         }
     }
 
