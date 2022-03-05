@@ -15,6 +15,9 @@
 // or just 2 or 3 great projects ?
 // cointity or quality ?
 
+// give a reason to learn typescript (wrong answers only)
+
+// they should call software developers copypastedevelopers 
 import React from 'react'
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
