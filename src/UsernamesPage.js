@@ -8,24 +8,23 @@ function UsernamesPage() {
     const {usernamesArray} = useContext(usernamesContext)
 
     // const [buttonName, setButtonName] = useState(true)
-    const [numberArray, setNumberArray] = useState([])
-    const [array, setArray] = useState([])
-    console.log(array)
+    let listOfUsernames = JSON.parse(localStorage.getItem("array"))
+    let listOfNumbers = JSON.parse(localStorage.getItem("arrayNumber"))
+    const [array, setArray] = useState(listOfUsernames)
+    const [arrayNumber, setArrayNumber] = useState(listOfNumbers)
+
     function addToFavorite(u) {
-        if (numberArray.includes(u.key) === false) {
-            setNumberArray([...numberArray, u.key])
+        if (arrayNumber.includes(u.key) === false) {
+            setArrayNumber([...arrayNumber, u.key])
             setArray([...array, u])
         }
     }
 
     useEffect(() => {
         localStorage.setItem("array", JSON.stringify(array))
+        localStorage.setItem("arrayNumber", JSON.stringify(arrayNumber))
     }, [array])
 
-    // todo: when a user clicks on the like button 
-    // it will change to become unlike
-    // like => will add to the favorite + change the text to become unlike
-    // unlike => will remove from favorite + change the text to become like
 
     return (
         <div className="usernames_page">
@@ -46,9 +45,9 @@ function UsernamesPage() {
                                 <div style={{display:"flex", justifyContent:"space-between"}}>
                                     <span style={{display:"flex", alignItems:"center"}}>{username.inspiredFrom}</span>
                                     <span 
-                                        className={numberArray.includes(username.key) ? "liked_box" : "like_box"}
+                                        className={arrayNumber.includes(username.key) ? "liked_box" : "like_box"}
                                         onClick={() => addToFavorite({key: username.key, username: username.username, inspiredFrom: username.inspiredFrom}) }>
-                                        {numberArray.includes(username.key) ? "liked" : "like"}
+                                        {arrayNumber.includes(username.key) ? "liked" : "like"}
                                     </span>
                                 </div>
                               </span>

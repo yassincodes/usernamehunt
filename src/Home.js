@@ -13,11 +13,15 @@
 // what do you think ?
 // is it better to put 10 average projects in your portfolio
 // or just 2 or 3 great projects ?
-// cointity or quality ?
+// cointity or quality ..?
 
-// give a reason to learn typescript (wrong answers only)
+// give me a reason to learn typescript (wrong answers only)
 
 // they should call software developers copypastedevelopers 
+
+// what to do if your code worked exactly the way you want it but you do not know how ?
+// do you let it that way or refactor it ?
+
 import React from 'react'
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
