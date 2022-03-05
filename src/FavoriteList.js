@@ -6,7 +6,6 @@ import HomeNav from "./HomeNav"
 function FavoriteList() {
     let listOfUsernames = JSON.parse(localStorage.getItem("array"))
     let listOfNumbers = JSON.parse(localStorage.getItem("arrayNumber"))
-
     const [array, setArray] = useState(listOfUsernames)
     const [arrayNumber, setArrayNumber] = useState(listOfNumbers)
 
