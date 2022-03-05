@@ -4,21 +4,30 @@ import HomeNav from "./HomeNav"
 // refugeejobsbord
 
 function FavoriteList() {
-    let storedArray = JSON.parse(localStorage.getItem("array"));
-    const [SA, setSA] = useState(storedArray)
-    // SA.splice(1,1)
-    const [number, setNumber] = useState(0)
-    console.log(number)
-    console.log(SA.indexOf(number) + 1)
+    let listOfUsernames = JSON.parse(localStorage.getItem("array"))
+    let listOfNumbers = JSON.parse(localStorage.getItem("arrayNumber"))
+
+    const [array, setArray] = useState(listOfUsernames)
+    const [arrayNumber, setArrayNumber] = useState(listOfNumbers)
+
+    const [number, setNumber] = useState()
+
     useEffect(() => {
-        SA.splice(SA.indexOf(number),1)
+        // console.log(arrayNumber.indexOf(number))
+        let filteredArray = array.filter(e => e.key !== number)
+        let filteredArrayNumber = arrayNumber.filter(e => e !== number)
+        setArray(filteredArray)
+        setArrayNumber(filteredArrayNumber)
+        localStorage.setItem("array", JSON.stringify(filteredArray))
+        localStorage.setItem("arrayNumber", JSON.stringify(filteredArrayNumber))
     }, [number])
+
     return (
         <div>
             <HomeNav />
             <div>
                 here is the favorite list
-                {SA.map((username) => {
+                {array.map((username) => {
                     return ( 
                     <div>
                         {username.username}
