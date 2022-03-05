@@ -12,7 +12,7 @@ function HomeForm() {
       firstName = firstInput && firstInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
       secondName = firstInput && secondInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
 
-      
+      // localStorage.setItem("arrayNumber", JSON.stringify([]))
       // making the list of usernames
       // focus on lowering cases and uppering cases
       // make different array + when u map the big one you will just concat them all
