@@ -1,9 +1,9 @@
-import React, {useContext, useEffect} from "react"
+import React, {useContext, useEffect, useState} from "react"
 import {usernamesContext} from "./usernamesContext"
 import { Link } from "react-router-dom"
 
 function HomeForm() {
-    const {setArrayNumber, firstInput, secondInput, setFirstInput, setSecondInput, array, setUsernamesArray} = useContext(usernamesContext)
+    const {setArrayNumber,setArrayUsername, firstInput, secondInput, setFirstInput, setSecondInput, array, setUsernamesArray} = useContext(usernamesContext)
     let firstName = ''
     let secondName = ''
 
@@ -14,9 +14,6 @@ function HomeForm() {
 
       // localStorage.setItem("arrayNumber", JSON.stringify([]))
       // store the old array in a new array in a new array
-      // setArrayNumber([])
-
-
       // one search results | looking for usrnames
       // one search saved: you'll find usernames of one specific search 
       // writen like that yassin klifi
@@ -32,22 +29,6 @@ function HomeForm() {
       array[1] = {key: 1, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
       array[2] = {key: 2, username: "DH" + firstName, inspiredFrom: "@ddheh"}
       array[3] = {key: 3, username: secondName + "45785", inspiredFrom: "@someone"}
-      array[4] = {key: 4, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
-      array[5] = {key: 5, username: firstName + "io", inspiredFrom: "@levelsio"}
-      array[6] = {key: 6, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
-      array[7] = {key: 7, username: "DH" + firstName, inspiredFrom: "@ddheh"}
-      array[8] = {key: 8, username: secondName + "45785", inspiredFrom: "@someone"}
-      array[9] = {key: 9, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
-      array[10] = {key: 10, username: firstName + "io", inspiredFrom: "@levelsio"}
-      array[11] = {key: 11, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
-      array[12] = {key: 12, username: "DH" + firstName, inspiredFrom: "@ddheh"}
-      array[13] = {key: 13, username: secondName + "45785", inspiredFrom: "@someone"}
-      array[14] = {key: 14, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
-      array[15] = {key: 15, username: firstName + "io", inspiredFrom: "@levelsio"}
-      array[16] = {key: 16, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
-      array[17] = {key: 17, username: "DH" + firstName, inspiredFrom: "@ddheh"}
-      array[18] = {key: 18, username: secondName + "45785", inspiredFrom: "@someone"}
-      array[19] = {key: 19, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
       setUsernamesArray(array)
 
       localStorage.setItem("firstName", firstName)
@@ -60,11 +41,15 @@ function HomeForm() {
         findUsername(localStorage.getItem("firstName"), localStorage.getItem("secondName"))
     }, [])
 
+    function fixFindUsername() {
+        setArrayNumber([])
+    }
+
     return (
         <form>
             <input type="text" id="firstName" value={firstInput === "null" ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>
             <input type="text" id="lastName"  value={secondInput === "null" ? "" : secondInput} onChange={(e) => setSecondInput(e.target.value)} />
-            <Link to="/usernames" id="findUsername" onClick={() => findUsername(firstInput, secondInput)}>find username!</Link>
+            <button onClick={fixFindUsername}><Link to="/usernames" id="findUsername" onClick={() => findUsername(firstInput, secondInput)}>find username!</Link></button>
         </form>
     )
 }

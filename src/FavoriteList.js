@@ -7,10 +7,12 @@ import HomeNav from "./HomeNav"
 function FavoriteList() {
     const {setArrayNumber, setArrayUsername, arrayNumber, arrayUsername} = useContext(usernamesContext)
     const [number, setNumber] = useState()
+    const [user, setUser] = useState()
+
 
     useEffect(() => {
         // console.log(arrayNumber.indexOf(number))
-        let filteredArrayUsername = arrayUsername.filter(e => e.key !== number)
+        let filteredArrayUsername = arrayUsername.filter(e => e.username !== user)
         let filteredArrayNumber = arrayNumber.filter(e => e !== number)
         setArrayUsername(filteredArrayUsername)
         setArrayNumber(filteredArrayNumber)
@@ -27,7 +29,7 @@ function FavoriteList() {
                     return ( 
                     <div>
                         {username.username}
-                        <button onClick={() => setNumber(username.key)}>remove</button>
+                        <p onClick={() => setUser(username.username)}><button onClick={() => setNumber(username.key)}>remove</button></p>
                     </div>
                 )})}
             </div>

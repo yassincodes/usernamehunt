@@ -17,7 +17,7 @@ function UsernamesPage() {
             setArrayNumber(filteredArrayNumber)
             localStorage.setItem("arrayNumber", JSON.stringify(filteredArrayNumber))
 
-            let filteredArrayUsername = arrayUsername.filter(e => e.key !== u.key)
+            let filteredArrayUsername = arrayUsername.filter(e => e.username !== u.username)
             setArrayUsername(filteredArrayUsername)
             localStorage.setItem("arrayUsername", JSON.stringify(filteredArrayUsername))
         }
@@ -28,6 +28,11 @@ function UsernamesPage() {
         localStorage.setItem("arrayNumber", JSON.stringify(arrayNumber))
     }, [arrayUsername])
 
+    let arrs = []
+    arrayUsername.map((ele) => {
+        arrs.push(ele.username)
+    })
+    console.log(arrs)
 
     return (
         <div className="usernames_page">
@@ -48,9 +53,9 @@ function UsernamesPage() {
                                 <div style={{display:"flex", justifyContent:"space-between"}}>
                                     <span style={{display:"flex", alignItems:"center"}}>{username.inspiredFrom}</span>
                                     <span 
-                                        className={arrayNumber.includes(username.key) ? "liked_box" : "like_box"}
+                                        className={(arrs.includes(username.username)) ? "liked_box" : "like_box"}
                                         onClick={() => addToFavorite({key: username.key, username: username.username, inspiredFrom: username.inspiredFrom}) }>
-                                        {arrayNumber.includes(username.key) ? "liked" : "like"}
+                                        {(arrs.includes(username.username)) ? "liked" : "like"}
                                     </span>
                                 </div>
                               </span>
