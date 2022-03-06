@@ -3,7 +3,7 @@ import {usernamesContext} from "./usernamesContext"
 import { Link } from "react-router-dom"
 
 function HomeForm() {
-    const {firstInput, secondInput, setFirstInput, setSecondInput, array, setUsernamesArray} = useContext(usernamesContext)
+    const {setArrayNumber, firstInput, secondInput, setFirstInput, setSecondInput, array, setUsernamesArray} = useContext(usernamesContext)
     let firstName = ''
     let secondName = ''
 
@@ -13,6 +13,17 @@ function HomeForm() {
       secondName = firstInput && secondInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
 
       // localStorage.setItem("arrayNumber", JSON.stringify([]))
+      // store the old array in a new array in a new array
+      // setArrayNumber([])
+
+
+      // one search results | looking for usrnames
+      // one search saved: you'll find usernames of one specific search 
+      // writen like that yassin klifi
+      //
+
+
+
       // making the list of usernames
       // focus on lowering cases and uppering cases
       // make different array + when u map the big one you will just concat them all
@@ -32,6 +43,11 @@ function HomeForm() {
       array[12] = {key: 12, username: "DH" + firstName, inspiredFrom: "@ddheh"}
       array[13] = {key: 13, username: secondName + "45785", inspiredFrom: "@someone"}
       array[14] = {key: 14, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
+      array[15] = {key: 15, username: firstName + "io", inspiredFrom: "@levelsio"}
+      array[16] = {key: 16, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+      array[17] = {key: 17, username: "DH" + firstName, inspiredFrom: "@ddheh"}
+      array[18] = {key: 18, username: secondName + "45785", inspiredFrom: "@someone"}
+      array[19] = {key: 19, username: firstName + "." + secondName, inspiredFrom: "@khaby.lame"}
       setUsernamesArray(array)
 
       localStorage.setItem("firstName", firstName)

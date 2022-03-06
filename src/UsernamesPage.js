@@ -5,33 +5,28 @@ import HomeForm from "./HomeForm"
 import { Link } from "react-router-dom"
 
 function UsernamesPage() {
-    const {usernamesArray} = useContext(usernamesContext)
+    const {usernamesArray, setArrayNumber, setArrayUsername, arrayNumber, arrayUsername} = useContext(usernamesContext)
 
     // const [buttonName, setButtonName] = useState(true)
-    let listOfUsernames = JSON.parse(localStorage.getItem("array"))
-    let listOfNumbers = JSON.parse(localStorage.getItem("arrayNumber"))
-    const [array, setArray] = useState(listOfUsernames)
-    const [arrayNumber, setArrayNumber] = useState(listOfNumbers)
-
     function addToFavorite(u) {
         if (arrayNumber.includes(u.key) === false) {
             setArrayNumber([...arrayNumber, u.key])
-            setArray([...array, u])
+            setArrayUsername([...arrayUsername, u])
         } else {
             let filteredArrayNumber = arrayNumber.filter(e => e !== u.key)
             setArrayNumber(filteredArrayNumber)
             localStorage.setItem("arrayNumber", JSON.stringify(filteredArrayNumber))
 
-            let filteredArray = array.filter(e => e.key !== u.key)
-            setArray(filteredArray)
-            localStorage.setItem("array", JSON.stringify(filteredArray))
+            let filteredArrayUsername = arrayUsername.filter(e => e.key !== u.key)
+            setArrayUsername(filteredArrayUsername)
+            localStorage.setItem("arrayUsername", JSON.stringify(filteredArrayUsername))
         }
     }
 
     useEffect(() => {
-        localStorage.setItem("array", JSON.stringify(array))
+        localStorage.setItem("arrayUsername", JSON.stringify(arrayUsername))
         localStorage.setItem("arrayNumber", JSON.stringify(arrayNumber))
-    }, [array])
+    }, [arrayUsername])
 
 
     return (

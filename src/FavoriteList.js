@@ -1,23 +1,20 @@
-import {useEffect, useState} from "react"
+import {useEffect, useState, useContext} from "react"
+import {usernamesContext} from "./usernamesContext"
 import HomeNav from "./HomeNav"
 
 // refugeejobsbord
 
 function FavoriteList() {
-    let listOfUsernames = JSON.parse(localStorage.getItem("array"))
-    let listOfNumbers = JSON.parse(localStorage.getItem("arrayNumber"))
-    const [array, setArray] = useState(listOfUsernames)
-    const [arrayNumber, setArrayNumber] = useState(listOfNumbers)
-
+    const {setArrayNumber, setArrayUsername, arrayNumber, arrayUsername} = useContext(usernamesContext)
     const [number, setNumber] = useState()
 
     useEffect(() => {
         // console.log(arrayNumber.indexOf(number))
-        let filteredArray = array.filter(e => e.key !== number)
+        let filteredArrayUsername = arrayUsername.filter(e => e.key !== number)
         let filteredArrayNumber = arrayNumber.filter(e => e !== number)
-        setArray(filteredArray)
+        setArrayUsername(filteredArrayUsername)
         setArrayNumber(filteredArrayNumber)
-        localStorage.setItem("array", JSON.stringify(filteredArray))
+        localStorage.setItem("arrayUsername", JSON.stringify(filteredArrayUsername))
         localStorage.setItem("arrayNumber", JSON.stringify(filteredArrayNumber))
     }, [number])
 
@@ -26,7 +23,7 @@ function FavoriteList() {
             <HomeNav />
             <div>
                 here is the favorite list
-                {array.map((username) => {
+                {arrayUsername.map((username) => {
                     return ( 
                     <div>
                         {username.username}
