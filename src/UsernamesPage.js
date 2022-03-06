@@ -8,8 +8,12 @@ function UsernamesPage() {
     const {usernamesArray, setArrayNumber, setArrayUsername, arrayNumber, arrayUsername} = useContext(usernamesContext)
 
     // const [buttonName, setButtonName] = useState(true)
+    let arrs = []
+    arrayUsername.map((ele) => {
+        arrs.push(ele.username)
+    })
     function addToFavorite(u) {
-        if (arrayNumber.includes(u.key) === false) {
+        if (arrs.includes(u.username) === false) {
             setArrayNumber([...arrayNumber, u.key])
             setArrayUsername([...arrayUsername, u])
         } else {
@@ -28,10 +32,7 @@ function UsernamesPage() {
         localStorage.setItem("arrayNumber", JSON.stringify(arrayNumber))
     }, [arrayUsername])
 
-    let arrs = []
-    arrayUsername.map((ele) => {
-        arrs.push(ele.username)
-    })
+
     console.log(arrs)
 
     return (

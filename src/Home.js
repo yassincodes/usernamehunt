@@ -22,6 +22,13 @@
 // what to do if your code worked exactly the way you want it but you do not know how ?
 // do you let it that way or refactor it ?
 
+
+// linktr.ee/yassin
+// twitter hereyassin
+// instagram hereyassin
+// tiktok hereyassin
+// website hereyassin.com
+
 import React from 'react'
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"
