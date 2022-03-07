@@ -37,6 +37,13 @@ function Home() {
   // when the home element renders we will clear the username
   localStorage.removeItem("firstName")
   localStorage.removeItem("secondName")
+  // localStorage.setItem("arrayNumber", JSON.stringify(filteredArrayNumber))
+  let listOfUsernames = JSON.parse(localStorage.getItem("arrayUsername"))
+  let listOfNumbers = JSON.parse(localStorage.getItem("arrayNumber"))
+  if (listOfUsernames === null || listOfNumbers === null) {
+    localStorage.setItem("arrayNumber", JSON.stringify([]))
+    localStorage.setItem("arrayUsername", JSON.stringify([]))
+  }
   return (
     <div className="App">
       <HomeNav />
