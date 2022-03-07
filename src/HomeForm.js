@@ -1,3 +1,17 @@
+
+      // making sure that the name contain only characters
+      
+      // localStorage.setItem("arrayNumber", JSON.stringify([]))
+      // store the old array in a new array in a new array
+      // one search results | looking for usrnames
+      // one search saved: you'll find usernames of one specific search 
+      // writen like that yassin klifi
+      
+      // making the list of usernames
+      // focus on lowering cases and uppering cases
+      // make different array + when u map the big one you will just concat them all
+      // before maping . you need to change the state to choose the type of array you want
+
 import React, {useContext, useEffect, useState} from "react"
 import {usernamesContext} from "./usernamesContext"
 import { Link } from "react-router-dom"
@@ -7,24 +21,10 @@ function HomeForm() {
     let firstName = ''
     let secondName = ''
 
-    function findUsername(firstInput, secondInput) {
-      // making sure that the name contain only characters
+    function findUsername(firstInput, secondInput) { 
       firstName = firstInput && firstInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
       secondName = firstInput && secondInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
 
-      // localStorage.setItem("arrayNumber", JSON.stringify([]))
-      // store the old array in a new array in a new array
-      // one search results | looking for usrnames
-      // one search saved: you'll find usernames of one specific search 
-      // writen like that yassin klifi
-      //
-
-
-
-      // making the list of usernames
-      // focus on lowering cases and uppering cases
-      // make different array + when u map the big one you will just concat them all
-      // before maping . you need to change the state to choose the type of array you want 
       array[0] = {key: 0, username: firstName + "io", inspiredFrom: "@levelsio"}
       array[1] = {key: 1, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
       array[2] = {key: 2, username: "DH" + firstName, inspiredFrom: "@ddheh"}
