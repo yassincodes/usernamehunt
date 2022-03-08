@@ -25,8 +25,9 @@ function HomeForm() {
     let secondName = ''
 
     function checkNames(first, second) {
-      console.log(first.length <= 2 && second.length <= 2)
-      return first.length <= 2 && second.length <= 2
+      console.log(first.length <= 10 && second.length <= 10)
+      console.log(firstInput === null)
+      return first.length <= 10 && second.length <= 10
     // first Name 
     // Second Name
     }
@@ -55,8 +56,8 @@ function HomeForm() {
 
     return (
         <form>
-            <input type="text" id="firstName" value={firstInput === "null" ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>
-            <input type="text" id="lastName"  value={secondInput === "null" ? "" : secondInput} onChange={(e) => setSecondInput(e.target.value)} />
+            <input type="text" id="firstName" value={firstInput === null ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>
+            <input type="text" id="lastName"  value={secondInput === null ? "" : secondInput} onChange={(e) => setSecondInput(e.target.value)} />
             <button onClick={fixFindUsername}><Link to={(firstInput === "n" && secondInput === "n") && "/usernames"} id="findUsername" onClick={() => checkNames(firstInput, secondInput) ? findUsername(firstInput, secondInput) : alert("go fuck yourself")}>find username!</Link></button>
         </form>
     )
