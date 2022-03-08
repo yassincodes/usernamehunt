@@ -27,19 +27,24 @@ function HomeForm() {
     let firstName = ''
     let secondName = ''
 
+    function checkNames(first, second) {
+        if (first === "n" && second === "n") {
+            return true
+        } else {
+            return false
+        }
+    }
+
     function findUsername(firstInput, secondInput) { 
-        
-            firstName = firstInput && firstInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
-            secondName = firstInput && secondInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
-      
-            array[0] = {key: 0, username: firstName + "io", inspiredFrom: "@levelsio"}
-            array[1] = {key: 1, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
-            array[2] = {key: 2, username: "DH" + firstName, inspiredFrom: "@ddheh"}
-            array[3] = {key: 3, username: secondName + "45785", inspiredFrom: "@someone"}
-            setUsernamesArray(array)
-      
-            localStorage.setItem("firstName", firstName)
-            localStorage.setItem("secondName", secondName) 
+        firstName = firstInput && firstInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
+        secondName = firstInput && secondInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
+        array[0] = {key: 0, username: firstName + "io", inspiredFrom: "@levelsio"}
+        array[1] = {key: 1, username: "hey" + firstName, inspiredFrom: "@heyeaslo"}
+        array[2] = {key: 2, username: "DH" + firstName, inspiredFrom: "@ddheh"}
+        array[3] = {key: 3, username: secondName + "45785", inspiredFrom: "@someone"}
+        setUsernamesArray(array)
+        localStorage.setItem("firstName", firstName)
+        localStorage.setItem("secondName", secondName) 
     }  
 
     useEffect(() => {
@@ -56,7 +61,7 @@ function HomeForm() {
         <form>
             <input type="text" id="firstName" value={firstInput === "null" ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>
             <input type="text" id="lastName"  value={secondInput === "null" ? "" : secondInput} onChange={(e) => setSecondInput(e.target.value)} />
-            <button onClick={fixFindUsername}><Link to={(firstInput === "n" && secondInput === "n") && "/usernames"} id="findUsername" onClick={() => (firstInput === "n" && secondInput === "n") ? findUsername(firstInput, secondInput) : alert("go fuck yourself")}>find username!</Link></button>
+            <button onClick={fixFindUsername}><Link to={(firstInput === "n" && secondInput === "n") && "/usernames"} id="findUsername" onClick={() => checkNames(firstInput, secondInput) ? findUsername(firstInput, secondInput) : alert("go fuck yourself")}>find username!</Link></button>
         </form>
     )
 }
