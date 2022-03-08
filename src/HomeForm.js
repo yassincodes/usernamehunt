@@ -1,18 +1,15 @@
-
-      // making sure that the name contain only characters
+// making sure that the name contain only characters
+     
+// localStorage.setItem("arrayNumber", JSON.stringify([]))
+// store the old array in a new array in a new array
+// one search results | looking for usrnames
+// one search saved: you'll find usernames of one specific search 
+// writen like that yassin klifi
       
-      // localStorage.setItem("arrayNumber", JSON.stringify([]))
-      // store the old array in a new array in a new array
-      // one search results | looking for usrnames
-      // one search saved: you'll find usernames of one specific search 
-      // writen like that yassin klifi
-      
-      // making the list of usernames
-      // focus on lowering cases and uppering cases
-      // make different array + when u map the big one you will just concat them all
-      // before maping . you need to change the state to choose the type of array you want
-
-
+// making the list of usernames
+// focus on lowering cases and uppering cases
+// make different array + when u map the big one you will just concat them all
+// before maping . you need to change the state to choose the type of array you want
 
 // bugs to fix rn
 // make user type in only proper names
@@ -28,11 +25,10 @@ function HomeForm() {
     let secondName = ''
 
     function checkNames(first, second) {
-        if (first === "n" && second === "n") {
-            return true
-        } else {
-            return false
-        }
+      console.log(first.length <= 2 && second.length <= 2)
+      return first.length <= 2 && second.length <= 2
+    // first Name 
+    // Second Name
     }
 
     function findUsername(firstInput, secondInput) { 
