@@ -54,7 +54,8 @@ function HomeForm() {
         findUsername(localStorage.getItem("firstName"), localStorage.getItem("secondName"))
     }, [])
 
-    function fixFindUsername() {
+    function fixFindUsername(e) {
+        e.preventDefault()
         setArrayNumber([])
     }
 
