@@ -24,13 +24,11 @@ function HomeForm() {
     let firstName = ''
     let secondName = ''
 
-    function checkNames(first, second) {
-      console.log(first.length <= 10 && second.length <= 10)
-      console.log(firstInput === null)
-      return first.length <= 10 && second.length <= 10
-    // first Name 
-    // Second Name
-    }
+    //function checkNames(first, second) {
+    //  return first.length <= 10 && second.length <= 10
+      // first Name 
+      // Second Name
+    //}
 
     function findUsername(firstInput, secondInput) { 
         firstName = firstInput && firstInput.split('').filter(char => /[a-zA-Z]/.test(char)).join("")
@@ -56,9 +54,9 @@ function HomeForm() {
 
     return (
         <form>
-            <input type="text" id="firstName" value={firstInput === null ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>
-            <input type="text" id="lastName"  value={secondInput === null ? "" : secondInput} onChange={(e) => setSecondInput(e.target.value)} />
-            <button onClick={fixFindUsername}><Link to={(firstInput === "n" && secondInput === "n") && "/usernames"} id="findUsername" onClick={() => checkNames(firstInput, secondInput) ? findUsername(firstInput, secondInput) : alert("go fuck yourself")}>find username!</Link></button>
+            <input type="text" id="firstName" value={firstInput === "null" ? "" : firstInput} onChange={(e) => setFirstInput(e.target.value)}/>
+            <input type="text" id="lastName"  value={secondInput === "null" ? "" : secondInput} onChange={(e) => setSecondInput(e.target.value)} />
+            <button onClick={fixFindUsername}><Link to={(firstInput === "n" && secondInput === "n") && "/usernames"} id="findUsername" onClick={() => findUsername(firstInput, secondInput)}>find username!</Link></button>
         </form>
     )
 }
