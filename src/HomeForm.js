@@ -80,7 +80,7 @@ function HomeForm() {
         array[40] = {key:40, username: firstName + "NFT", inspiredFrom: "sajadNFT"}
         array[41] = {key:41, username: firstName + "twts", inspiredFrom: "Unnati_twts"}
         array[42] = {key:42, username: (firstName && firstName.charAt(0)) + "_" + secondName, inspiredFrom: "J_Schiff"}
-        array[43] = {key:43, username: "the" + (firstName && firstName.charAt(0)) + "lastName", inspiredFrom: "themsaid"}
+        array[43] = {key:43, username: "the" + (firstName && firstName.charAt(0)) + secondName, inspiredFrom: "themsaid"}
         array[44] = {key:44, username: firstName + "33" + secondName, inspiredFrom: "Max33Verstappen"}
         array[45] = {key:45, username: firstName + "_makes", inspiredFrom: "johnny_makes"}
         array[46] = {key:46, username: (firstName && firstName.slice(0,2)) + "TheMaker", inspiredFrom: "AnTheMaker"}
@@ -97,19 +97,20 @@ function HomeForm() {
         array[57] = {key:57, username: firstName + firstName + "Code", inspiredFrom: "DanDanCode"}
         array[58] = {key:58, username: "endingwith" + firstName, inspiredFrom: "endingwithali"}
         array[59] = {key:59, username: firstName + "SaaS", inspiredFrom: "JustinSaaS"}
-        // array[19] = {key:19, username: "that_" + firstName, inspiredFrom: "that_oneblonde"}
-        // mansoorcodes yosracodes
-        // codinghorror
-        // heyblake
-        // @kvncnls
-        // vikstack
-        // ChristophM
-        // @Aella_Girl
-        // thisiszackyoung
-        // miyassin
-        // OfficialTravlad
-        // heyOnuoha
-        // hussien_coding
+        array[60] = {key:60, username: firstName + "_" + secondName + "_of", inspiredFrom: "malek_oueslati_of"}
+        array[61] = {key:61, username: firstName + secondName + ".io", inspiredFrom: "jacktran.io"}
+        array[62] = {key:62, username: (firstName && firstName.slice(0,3)) + "_" + (secondName && secondName.slice(0,3)), inspiredFrom: "matt_haf"}
+        array[63] = {key:63, username: "", inspiredFrom: ""}
+        array[64] = {key:64, username: "", inspiredFrom: ""}
+        array[65] = {key:65, username: "", inspiredFrom: ""}
+        array[66] = {key:66, username: "", inspiredFrom: ""}
+        array[67] = {key:67, username: "", inspiredFrom: ""}
+        array[68] = {key:68, username: "", inspiredFrom: ""}
+        array[69] = {key:69, username: "", inspiredFrom: ""}
+        array[70] = {key:70, username: "", inspiredFrom: ""}
+        array[71] = {key:71, username: "", inspiredFrom: ""}
+        array[72] = {key:72, username: "", inspiredFrom: ""}
+        array[73] = {key:73, username: "", inspiredFrom: ""}
         setUsernamesArray(array)
         localStorage.setItem("firstName", firstName)
         localStorage.setItem("secondName", secondName) 

@@ -5,7 +5,7 @@ function HomeNav() {
     return (
         <nav>
           <h2><Link to="/">usernameHunt</Link></h2>
-          <p className="download_extension"><Link to="extension" style={{color:"white", textDecoration:"none"}}>download extension</Link></p>
+          <p className="download_extension"><Link to="/extension" style={{color:"white", textDecoration:"none"}}>download extension</Link></p>
         </nav>
     )
 }

@@ -1,0 +1,14 @@
+.extension {
+    display: flex;
+    justify-content: space-around;
+    border:2px solid black;
+    border-radius: 20px;
+    margin-top:10px;
+}
+
+.extension p {
+    background:red;
+    border:2px dotted blueviolet;
+    display:flex;
+    justify-content: center;
+}
