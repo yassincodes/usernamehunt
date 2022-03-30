@@ -1,14 +1,21 @@
 .extension {
     display: flex;
-    justify-content: space-around;
-    border:2px solid black;
-    border-radius: 20px;
+    justify-content: center;
     margin-top:10px;
 }
 
-.extension p {
-    background:red;
-    border:2px dotted blueviolet;
-    display:flex;
-    justify-content: center;
+.download, .send {
+    border:2px solid black;
+    padding:5px 20px 5px 20px;
+    cursor:pointer;
+}
+
+.download {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.send {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }

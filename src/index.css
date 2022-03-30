@@ -134,6 +134,13 @@ form {
   border-radius: 5px;
   padding-top:4px;
   padding-bottom: 4px;
+  transition: 200ms;
+}
+
+.like_box:hover, .liked_box:hover {
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
 }
 
 .liked_box {
@@ -149,6 +156,3 @@ form {
   display:flex;
   justify-content: flex-end;
 }
-
-
-
