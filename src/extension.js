@@ -14,7 +14,13 @@ function Extension() {
             </div>
             <div className="content">
                 {
-                    isBg ? "hi" : "cool"
+                    isBg 
+                    ? <div>
+                        cool
+                    </div>
+                    : <div>
+                        ggg
+                    </div>
                 }
             </div>
         </div>
