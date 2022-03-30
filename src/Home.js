@@ -29,6 +29,7 @@
 // tiktok hereyassin
 // website hereyassin.com
 
+// what if your code works very well but you do not know how ?
 import React from 'react'
 import HomeNav from "./HomeNav"
 import HomeForm from "./HomeForm"

@@ -52,7 +52,7 @@ function UsernamesPage() {
                               <span className="username_box" style={{width:"40vw"}}>{username.username}</span>
                               <span className="username_box" style={{width:"50vw"}}>
                                 <div style={{display:"flex", justifyContent:"space-between"}}>
-                                    <span style={{display:"flex", alignItems:"center"}}>{username.inspiredFrom}</span>
+                                    <span style={{display:"flex", alignItems:"center"}}>@{username.inspiredFrom}</span>
                                     <span 
                                         className={(arrs.includes(username.username)) ? "liked_box" : "like_box"}
                                         onClick={() => addToFavorite({key: username.key, username: username.username, inspiredFrom: username.inspiredFrom}) }>
