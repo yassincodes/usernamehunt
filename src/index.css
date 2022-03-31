@@ -9,6 +9,9 @@ body {
   font-size:1.16em;
 }
 
+button {
+  cursor:pointer;
+}
 nav {
   display:flex;
   justify-content: space-between;
@@ -155,4 +158,25 @@ form {
   padding:2.5vh 2.5vw;
   display:flex;
   justify-content: flex-end;
+}
+
+.score_nav {
+  display:flex;
+  justify-content: space-between;
+}
+
+.calculator-row {
+  display:flex;
+  justify-content: space-between;
+}
+
+.calculator-row_plus {
+  width:10vw;
+}
+
+.close {
+  margin-top:2vh;
+  padding-top:0.6em;
+  padding-bottom:0.6em;
+  width:100%;
 }
