@@ -47,8 +47,6 @@ function FavoriteList() {
     let filteredArrayUsername = []
     let filteredArrayNumber = []
     useEffect(() => {
-        // console.log(arrayNumber.indexOf(number))
-        console.log(user)
         filteredArrayUsername = arrayUsername.filter(e => e.username !== user)
         filteredArrayNumber = arrayNumber.filter(e => e !== number)
         setArrayUsername(filteredArrayUsername)
@@ -65,6 +63,15 @@ function FavoriteList() {
         setIsPlus3(true)
     }
 
+    const [hover, setHover] = useState(false)
+    function handleHover(number) {
+        if (number) {
+            setHover(number)
+        } else {
+            setHover(false)
+        }
+    }
+
     return (
         <div>
             <HomeNav />
@@ -72,22 +79,26 @@ function FavoriteList() {
                 here is the favorite list
                 {arrayUsername.map((username, key) => {
                     return ( 
-                    <div key={uuid()}>
-                        {username.username}
-                        <p onClick={() => setUser(username.username)}>
-                            <button onClick={() => setNumber(username.key)}>
-                                remove
-                            </button>
-                        </p>
-                        <p onClick={() => setUser(username.username)}>
-                            <button onClick={() => setVisible(true)}>
-                                calculate
-                            </button>
-                        </p>
+                    <div key={uuid()} className="favorite-box" >
+                        <div>
+                            {username.username}
+                        </div>
+                        <div style={{display:"flex"}}>
+                            <p onClick={() => setUser(username.username)}>
+                                <button onClick={() => setVisible(true)} className="favoriteList_button">
+                                    calculate
+                                </button>
+                            </p>
+                            <p onClick={() => setUser(username.username)}>
+                                <button onClick={() => setNumber(username.key)} className="favoriteList_button">
+                                    remove
+                                </button>
+                            </p>
+                        </div>
                     </div>
                 )})}
-                <Modal visible={visible} width="400" heigth="1600" effect="fadeInDown"  onClickAway={handleVisible}>
-                    <div>
+                <Modal visible={visible} width="400" heigth="1600" effect="fadeInDown" onClickAway={handleVisible}>
+                    <div style={{padding:"1em"}} >
                         <div className="score_nav">
                             <h3>{user}</h3>
                             <h3>score: {score}</h3>
@@ -100,15 +111,15 @@ function FavoriteList() {
                         <div>
                             <div className="calculator-row">
                                 <p>easy to remember</p>
-                                <button onClick={() => calculate(1)} className="calculator-row_plus">{isPlus1 ? "+10" : "-10"}</button>
+                                <button onMouseEnter={() => handleHover(1)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(1)} className="calculator-row_plus" style={hover == 1 ? {color:"red"} : {color: "black"}} >{isPlus1 ? "+10" : "-10"}</button>
                             </div>
                             <div className="calculator-row">
                                 <p>you can use it in all of your social media</p>
-                                <button onClick={() => calculate(2)} className="calculator-row_plus">{isPlus2 ? "+5" : "-5"}</button>
+                                <button onMouseEnter={() => handleHover(2)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(2)} className="calculator-row_plus" style={hover == 2 ? {color:"red"} : {color: "black"}} >{isPlus2 ? "+5" : "-5"}</button>
                             </div>
                             <div className="calculator-row">
                                 <p>it represents who you are and your brand</p>
-                                <button onClick={() => calculate(3)} className="calculator-row_plus">{isPlus3 ? "+5" : "-5"}</button>
+                                <button onMouseEnter={() => handleHover(3)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(3)} className="calculator-row_plus" style={hover == 3 ? {color:"red"} : {color: "black"}} >{isPlus3 ? "+5" : "-5"}</button>
                             </div>
                         </div>
                         <button onClick={handleVisible} className="close">Close</button>

@@ -20,7 +20,6 @@ function UsernamesPage() {
             let filteredArrayNumber = arrayNumber.filter(e => e !== u.key)
             setArrayNumber(filteredArrayNumber)
             localStorage.setItem("arrayNumber", JSON.stringify(filteredArrayNumber))
-
             let filteredArrayUsername = arrayUsername.filter(e => e.username !== u.username)
             setArrayUsername(filteredArrayUsername)
             localStorage.setItem("arrayUsername", JSON.stringify(filteredArrayUsername))

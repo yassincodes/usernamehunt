@@ -1,11 +1,11 @@
-array[19] = {key:19, username: "that_" + firstName, inspiredFrom: "that_oneblonde"}
-mansoorcodes yosracodes
+that_oneblonde
+mansoorcodes/yosracodes
 codinghorror
 heyblake
-@kvncnls
+kvncnls
 vikstack
 ChristophM
-@Aella_Girl
+Aella_Girl
 thisiszackyoung
 miyassin
 OfficialTravlad
