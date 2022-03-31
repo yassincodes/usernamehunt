@@ -168,15 +168,65 @@ form {
 .calculator-row {
   display:flex;
   justify-content: space-between;
+  height:10vh;
 }
 
 .calculator-row_plus {
   width:10vw;
+  border-radius: 10px;
+  margin:1px;
+  border:2px dotted black;
+  background:rgb(165, 165, 226);
+}
+
+@media screen and (min-width: 700px) {
+  .calculator-row_plus {
+    width:5vw;
+  }
 }
 
 .close {
   margin-top:2vh;
   padding-top:0.6em;
   padding-bottom:0.6em;
+  border-radius: 10px;
+  border:2px solid black;
+  background:black;
+  color:white;
+  margin-top:2em;
   width:100%;
+  transition:300ms;
+}
+
+.close:hover {
+  transform: scale(0.86);
+}
+
+.favorite-box {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.favoriteList_button {
+  background:rgb(207, 207, 207);
+  border:2px solid black;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-left:10px;
+  padding-right:10px;
+  margin-right:5px;
+  cursor:pointer;
+  border-radius: 5px;
+  padding-top:4px;
+  padding-bottom: 4px;
+  transition: 200ms;
+}
+
+.favoriteList_button:hover {
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
 }
