@@ -12,6 +12,7 @@ body {
 button {
   cursor:pointer;
 }
+
 nav {
   display:flex;
   justify-content: space-between;
@@ -106,13 +107,11 @@ form {
   border-radius:20px;
 } 
 
-
 .test {
   border-radius: 20px;
 }
 
 .username_box {
-
   padding-left:20px;
   padding-right:20px;
 }
@@ -165,6 +164,10 @@ form {
   justify-content: space-between;
 }
 
+.explaining {
+  margin-top:0;
+}
+
 .calculator-row {
   display:flex;
   justify-content: space-between;
@@ -172,11 +175,13 @@ form {
 }
 
 .calculator-row_plus {
-  width:10vw;
+  width:12vw;
   border-radius: 10px;
   margin:1px;
-  border:2px dotted black;
-  background:rgb(165, 165, 226);
+  height:80%;
+  border:2px solid black;
+  background:none;
+  transition: 300ms;
 }
 
 @media screen and (min-width: 700px) {
@@ -186,12 +191,14 @@ form {
 }
 
 .close {
-  margin-top:2vh;
+  font-size:1.03em;
+  margin-top:1vh;
+  margin-bottom:1vh;
   padding-top:0.6em;
   padding-bottom:0.6em;
   border-radius: 10px;
-  border:2px solid black;
   background:black;
+  border:none;
   color:white;
   margin-top:2em;
   width:100%;
@@ -199,13 +206,19 @@ form {
 }
 
 .close:hover {
-  transform: scale(0.86);
+  transform: scale(0.76);
+  background:purple;
+  border:none;
 }
 
 .favorite-box {
   display:flex;
   justify-content:space-between;
   align-items:center;
+}
+
+.favoriteList_username {
+  margin-left:6px;
 }
 
 .favoriteList_button {
@@ -217,16 +230,21 @@ form {
   align-items: center;
   padding-left:10px;
   padding-right:10px;
-  margin-right:5px;
+  margin-right:7px;
   cursor:pointer;
-  border-radius: 5px;
+  border-radius: 6px;
   padding-top:4px;
   padding-bottom: 4px;
   transition: 200ms;
+  font-size: 1.05em;
 }
 
 .favoriteList_button:hover {
   box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+}
+
+.score-nav p {
+  margin-top:0;
 }
