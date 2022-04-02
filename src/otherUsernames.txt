@@ -11,3 +11,31 @@ miyassin
 OfficialTravlad
 heyOnuoha
 hussien_coding
+y_chun
+beautifymeeh
+itsjojosiwa/itsniane/itsevantan/itsdanielmac/itssover (this is the first name in my list)
+callmelelaisam/callmekoosh
+tomrosenthalmusic
+iamjustinvibes/iamcardib/iamjonjackson/iamwillcannon
+itzslavik
+stephsmithio
+thejackforge/thepatwalls
+yash desai => yhdesai
+codingyuri
+katherinecodes/petecodes
+theandreboso/thekitze
+nikita_builds
+csallen
+
+// --------ppl I'm gonna add but not for now-------///
+// patrick mckenzie => patio11
+// haseeb qureshi => hosseeb
+// francescociulla => francescociull4
+// tony dinh => tdinh_me
+
+
+// --------
+// array[105] = {key:105, username: firstName + secondName + "1", inspiredFrom: "jakekrantz1"}
+// array[83] = {key:83, username: firstName + "realtiktok", inspiredFrom: "putinrealtiktok"}
+// array[80] = {key:80, useranem: firstName + "zzy", inspiredFrom: "kxmzzzy"}
+// array[109] = {key:109, username: "itz" + firstName, inspiredFrom: "itzslavik"}
