@@ -169,6 +169,10 @@ function HomeForm() {
         array[129] = {key:129, username: "_" + firstName + (secondName && secondName.charAt(0)), inspiredFrom: "_shahedk"}
         array[130] = {key:130, username: firstName + secondName + "org", inspiredFrom: "SamHarrisOrg"}
         array[131] = {key:131, username: secondName + "_" + firstName, inspiredFrom: "harari_yuval"}
+        array[132] = {key:132, username: "hiim" + firstName, inspiredFrom: "hiimrubiks"}
+        array[133] = {key:133, username: "whois" + firstName, inspiredFrom: "whoiskatrin"}
+        array[134] = {key:134, username: "bigdeal" + firstName, inspiredFrom: "bigdealkhaleel"}
+        
         
         setUsernamesArray(array)
         localStorage.setItem("firstName", firstName)
