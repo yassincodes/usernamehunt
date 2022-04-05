@@ -2,7 +2,7 @@ import {useEffect, useState, useContext} from "react"
 import {usernamesContext} from "./usernamesContext"
 import HomeNav from "./HomeNav"
 import Modal from 'react-awesome-modal'
-
+import { Link } from "react-router-dom"
 function FavoriteList() {
     const {setArrayNumber, setArrayUsername, arrayNumber, arrayUsername} = useContext(usernamesContext)
     const [visible, setVisible] = useState(false)
@@ -105,7 +105,10 @@ function FavoriteList() {
         <div>
             <HomeNav />
             <div>
-                here is the favorite list
+                <div style={{display:"flex"}}>
+                    <div style={{marginLeft: "6px"}}><Link to="/usernames">back</Link></div>
+                    <div style={{marginLeft: "20px"}}>here is the favorite list</div>
+                </div>
                 {arrayUsername.map((username, key) => {
                     return ( 
                     <div key={key} className="favorite-box" >

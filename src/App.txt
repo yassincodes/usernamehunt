@@ -1,0 +1,48 @@
+// idea
+a web app for you to find your next awesome username
+usernameHunt gonna generate you a username similar to what famous influencers has lol
+
+// why I'm building this
+I found it is the best why to learn more about array manipulation and how online stores work
+and also to find a new username
+
+// what makes usernameHunt different
+currently there is a lot of websites doiing so (like: ...) but they all generate random names
+that are not for ppl who wanna build a brand for themselves
+
+// market
+I do not know how to calculate the market 
+But as I found visitors of ... passed 1 million
+visitors of ... passed 500k 
+
+// monetizing
+finding a sponsor
+google ads
+
+// problem
+thousands of ppl are starting their social media careers
+I think it is a great problem, they are looking for great usernames but all great usernames are taken
+also ppl feel more comfortable using a certain username if they see some famous dude using it also
+
+// marketing idea:
+share website with tiktokers who help other tiktokers build their brand like jtbarnett
+send website to brands with bad usernames
+tweet some tweets and videos
+make a button called do you have 1k followers and used my app. Plz drop me a message 
+pinterest and reddit
+productHunt
+talk with tiktokers
+
+// tweets
+* I thought that by finishing the react and javascript parts in my app things will get easier
+but discovered that the css is the hardest
+* HowItWas      HowItWents
+* had to manipulate the same 2 strings 300 times to build this LOL. All code is in the front end haha
+
+// things to add
+=> categories (do it like namecheap)
+=> username checker 
+=> username calculator
+=> how your username will look like in different social media
+=> your username written in a catchy way (just to feel better about it lol)
+
