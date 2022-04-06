@@ -105,7 +105,7 @@ function FavoriteList() {
         <div>
             <HomeNav />
             <div>
-                <div style={{display:"flex"}}>
+                <div style={{display:"flex", justifyContent: "center"}}>
                     <div style={{marginLeft: "6px"}}><Link to="/usernames">back</Link></div>
                     <div style={{marginLeft: "20px"}}>here is the favorite list</div>
                 </div>

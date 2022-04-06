@@ -41,8 +41,14 @@ but discovered that the css is the hardest
 
 // things to add
 => categories (do it like namecheap)
+=> usernameHunt for companies 
+=> usernameHunt for website domain names
+=> a book that contains advices to find a great username
+=> articles on how to find a great username
 => username checker 
 => username calculator
+=> organise usernames by calculator or by controlling with your hand
+=> I find my username using usernameHunt dashboard + we will show names organised by how many followers you have
 => how your username will look like in different social media
 => your username written in a catchy way (just to feel better about it lol)
 
