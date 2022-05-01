@@ -157,17 +157,23 @@ function FavoriteList() {
                                 <button onMouseEnter={() => handleHover(3)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(3)} className="calculator-row_plus" style={hover == 3 ? {transform:"scale(1.15)", border:"2px solid purple"} : (hover == 1 || hover == 2 || hover == 4 || hover == 5 || hover == 6) ? {transform:"scale(0.63)"} : {color: "black"}} >{isPlus3 ? "+ 5" : "- 5"}</button>
                             </div>
                             <div className="calculator-row">
-                                <p>it represents who you are and your brand</p>
+                                <p>it makes ppl think that you're cool</p>
                                 <button onMouseEnter={() => handleHover(4)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(4)} className="calculator-row_plus" style={hover == 4 ? {transform:"scale(1.15)", border:"2px solid purple"} : (hover == 1 || hover == 2 || hover == 3 || hover == 5 || hover == 6) ? {transform:"scale(0.63)"} : {color: "black"}} >{isPlus4 ? "+ 5" : "- 5"}</button>
                             </div>
                             <div className="calculator-row">
-                                <p>it represents who you are and your brand</p>
+                                <p>you're happy to tell to others</p>
                                 <button onMouseEnter={() => handleHover(5)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(5)} className="calculator-row_plus" style={hover == 5 ? {transform:"scale(1.15)", border:"2px solid purple"} : (hover == 1 || hover == 2 || hover == 3 || hover == 4 || hover == 6) ? {transform:"scale(0.63)"} : {color: "black"}} >{isPlus5 ? "+ 5" : "- 5"}</button>
                             </div>
                             <div className="calculator-row">
-                                <p>it represents who you are and your brand</p>
+                                <p>it contains a small number of letters</p>
                                 <button onMouseEnter={() => handleHover(6)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(6)} className="calculator-row_plus" style={hover == 6 ? {transform:"scale(1.15)", border:"2px solid purple"} : (hover == 1 || hover == 2 || hover == 3 || hover == 4 || hover == 5) ? {transform:"scale(0.63)"} : {color: "black"}} >{isPlus6 ? "+ 5" : "- 5"}</button>
                             </div>
+                           {
+                           //  <div className="calculator-row">
+                           //      <p>imagine if someone like elon musk have that username, whould it be great?</p>
+                           //      <button onMouseEnter={() => handleHover(7)} onMouseLeave={() => handleHover(false)} onClick={() => calculate(7)} className="calculator-row_plus" style={hover == 7 ? {transform:"scale(1.15)", border:"2px solid purple"} : (hover == 1 || hover == 2 || hover == 3 || hover == 4 || hover == 5) ? {transform:"scale(0.63)"} : {color: "black"}} >{isPlus6 ? "+ 5" : "- 5"}</button>
+                           //  </div>
+                           }
                         </div>
                         <button onClick={handleVisible} className="close">Close</button>
                     </div>

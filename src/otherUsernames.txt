@@ -39,6 +39,7 @@ thispeterlewis
 // _klarahere_
 // fromaline
 // techleadhd
+// viametamap
 
 // --------
 // array[105] = {key:105, username: firstName + secondName + "1", inspiredFrom: "jakekrantz1"}
@@ -51,3 +52,11 @@ thispeterlewis
 yasssinfyi
 yassinland
 hereyassin yassin.here
+
+yassin
+@codingyas
+
+Documenting the journey here on twitter
+Linktr.ee/yassin
+
+yassincodes.github.io
